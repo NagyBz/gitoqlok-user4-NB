@@ -1,0 +1,23 @@
+///$tab Mapping
+Map_Division2Customers:
+mapping
+LOAD DivisionID,
+    DivisionName;
+SQL SELECT 
+*
+FROM Divisions;
+
+Map_Shipper2Order:
+mapping
+LOAD 
+	ShipperID,
+	CompanyName;
+SQL SELECT
+*
+FROM Shippers;
+
+Map_UnitCost2Orderdetails:
+mapping
+Load ProductID,
+UnitCost;
+SQL SELECt * From Products;

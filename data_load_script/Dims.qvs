@@ -17,7 +17,8 @@ LOAD
     ContactName,
     Country,
     CustomerID,
-    DivisionID,
+    //DivisionID,
+    ApplyMap('Map_Division2Customers',DivisionID,'n/a') as DivisionName,
     Fax,
     Phone,
     PostalCode,
@@ -40,6 +41,8 @@ LOAD
 SQL SELECT
 *
 FROM Products;
+
+
 
 Dim_Divisions:
 LOAD DivisionID,
@@ -109,7 +112,7 @@ FROM [$(dInput)Suppliers.xml]
 Unqualify *;
 
 
-LOAD CompanyName as ShipperName,
-    ShipperID;
-SQL SELECT *
-FROM Shippers;
+// LOAD CompanyName as ShipperName,
+//     ShipperID;
+// SQL SELECT *
+// FROM Shippers;

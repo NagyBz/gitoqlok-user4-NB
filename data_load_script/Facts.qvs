@@ -9,15 +9,25 @@ LOAD CustomerID,
     day(OrderDate)   as Day,
     'Q'& ceil(month(OrderDate)/3) as Quarter,    //vypocitaj kvartal
     OrderID,
-    ShipperID;
+    ShipperID,
+    ApplyMap('Map_Shipper2Order',ShipperID,'n/a') as ShipperName;
 SQL SELECT 
 *
 FROM Orders;
 
 
-[Fact_OrderDetails]:
+//[Fact_OrderDetails]:
+left join (Fact_Order)
+Load
+*,
+Margin/LineSalesAmount as margin%;
+load *,
+LineSalesAmount - LineCostAmount as Margin;
 LOAD 
-	UnitPrice * (1-Discount)* Quantity as LineSales,
+	UnitPrice * (1-Discount)* Quantity 				 as LineSalesAmount,
+   // UnitCost* Quantity                 as LineCostAmount,
+    ApplyMap('Map_UnitCost2Orderdetails',ProductID,0) as LineCostAmount,
+    
 	Discount,
     LineNo,
     OrderID,
