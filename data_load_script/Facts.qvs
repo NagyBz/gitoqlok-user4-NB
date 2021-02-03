@@ -1,7 +1,8 @@
 ///$tab Facts
-Order:
+Fact_Order:
 LOAD CustomerID,
     EmployeeID,
+    EmployeeID as Tmp_EmployeeID,
     Freight,
     year(OrderDate)  as Year,
     month(OrderDate) as Month,
@@ -14,15 +15,31 @@ SQL SELECT
 FROM Orders;
 
 
-[Order Details]:
+[Fact_OrderDetails]:
 LOAD 
 	UnitPrice * (1-Discount)* Quantity as LineSales,
 	Discount,
     LineNo,
     OrderID,
     ProductID,
+    OrderID&'|'&ProductID as OrderProduct_ID,
     Quantity,
     UnitPrice;
 SQL SELECT
 *
 FROM `Order Details`;
+
+
+Fact_Shipments:
+LOAD 
+	OrderID&'|'&ProductID as OrderProduct_ID,
+	//CustomerID,
+   // EmployeeID,
+   // LineNo,
+   // OrderID,
+    //ProductID,
+    ShipmentDate,
+    //ShipperID
+    ;
+SQL SELECT *
+FROM Shipments;

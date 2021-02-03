@@ -68,8 +68,10 @@ Load
 	Name as SalesPerson,
 	Title as SalesTitle
 resident Dim_Employee
-where Title = 'Storeman'
-or Title like 'Sales*'
+where 
+Exists(Tmp_EmployeeID,EmployeeID)
+// Title = 'Storeman'
+// or Title like 'Sales*'
 ;
 
 
@@ -105,3 +107,9 @@ FROM [$(dInput)Suppliers.xml]
 (XmlSimple, table is [Suppliers/_empty_]);
 
 Unqualify *;
+
+
+LOAD CompanyName as ShipperName,
+    ShipperID;
+SQL SELECT *
+FROM Shippers;
