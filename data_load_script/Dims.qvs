@@ -1,5 +1,5 @@
 ///$tab Dims
-Categories:
+Dim_Categories:
 LOAD 
 	CategoryID,
     CategoryName,
@@ -9,7 +9,7 @@ SQL SELECT
 FROM Categories;
 
 
-Customers:
+Dim_Customers:
 LOAD 
 	Address,
     City,
@@ -26,7 +26,7 @@ SQL SELECT
 *
 FROM Customers;
 
-Products:
+Dim_Products:
 LOAD
 	CategoryID,
     ProductID,
@@ -41,28 +41,40 @@ SQL SELECT
 *
 FROM Products;
 
-Divisions:
+Dim_Divisions:
 LOAD DivisionID,
     DivisionName;
 SQL SELECT 
 *
 FROM Divisions;
 
-Employee:
+Dim_Employee:
 LOAD
     EmpID as EmployeeID,
-    "Last Name",
-    "First Name",
+    "Last Name" &' '&"First Name" as Name,
     Title,
     "Hire Date",
     Office,
     "Extension",
     "Reports To",
     "Year Salary"
-FROM [lib://2_Input(DEV)/EmpOff.xls]
+FROM [$(dInput)EmpOff.xls]
 (biff, embedded labels, table is Employee$);
 
-Offices:
+
+Dim_SalesPeople:
+Load
+	EmployeeID,
+	Name as SalesPerson,
+	Title as SalesTitle
+resident Dim_Employee
+where Title = 'Storeman'
+or Title like 'Sales*'
+;
+
+
+
+Dim_Offices:
 LOAD
     Office,
     OfficeAddress,
@@ -72,13 +84,13 @@ LOAD
     OfficePhone,
     OfficeFax,
     OfficeCountry
-FROM [lib://2_Input(DEV)/EmpOff.xls]
+FROM [$(dInput)EmpOff.xls]
 (biff, embedded labels, table is Office$);
 
 Qualify *;
 Unqualify SupplierID;
 
-Suppliers:
+Dim_Suppliers:
 LOAD
     SupplierID,
     CompanyName,
@@ -89,7 +101,7 @@ LOAD
     Country,
     Phone,
     Fax
-FROM [lib://2_Input(DEV)/Suppliers.xml]
+FROM [$(dInput)Suppliers.xml]
 (XmlSimple, table is [Suppliers/_empty_]);
 
 Unqualify *;

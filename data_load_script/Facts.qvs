@@ -6,7 +6,7 @@ LOAD CustomerID,
     year(OrderDate)  as Year,
     month(OrderDate) as Month,
     day(OrderDate)   as Day,
-    'Q' as Quarter,
+    'Q'& ceil(month(OrderDate)/3) as Quarter,    //vypocitaj kvartal
     OrderID,
     ShipperID;
 SQL SELECT 
@@ -15,7 +15,9 @@ FROM Orders;
 
 
 [Order Details]:
-LOAD Discount,
+LOAD 
+	UnitPrice * (1-Discount)* Quantity as LineSales,
+	Discount,
     LineNo,
     OrderID,
     ProductID,

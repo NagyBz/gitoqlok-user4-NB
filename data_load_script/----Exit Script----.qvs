@@ -1,0 +1,9 @@
+///$tab ----Exit Script----
+Concatenate([Reload Time])
+Load 
+	Now() as ReloadEnd
+AutoGenerate 1;
+
+
+
+Exit Script;

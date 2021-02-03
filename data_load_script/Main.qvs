@@ -1,23 +1,73 @@
 ///$tab Main
-SET ThousandSep=' ';
-SET DecimalSep=',';
-SET MoneyThousandSep=' ';
-SET MoneyDecimalSep=',';
-SET MoneyFormat='# ##0,00 €;-# ##0,00 €';
-SET TimeFormat='h:mm:ss';
-SET DateFormat='D. M. YYYY';
-SET TimestampFormat='D. M. YYYY h:mm:ss[.fff]';
-SET FirstWeekDay=0;
-SET BrokenWeeks=0;
-SET ReferenceDay=4;
-SET FirstMonthOfYear=1;
-SET CollationLocale='sk-SK';
-SET CreateSearchIndexOnReload=1;
-SET MonthNames='jan;feb;mar;apr;máj;jún;júl;aug;sep;okt;nov;dec';
-SET LongMonthNames='január;február;marec;apríl;máj;jún;júl;august;september;október;november;december';
-SET DayNames='po;ut;st;št;pi;so;ne';
-SET LongDayNames='pondelok;utorok;streda;štvrtok;piatok;sobota;nedeľa';
-SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+[Reload Time]:
+Load 
+	Now() as ReloadStarted
+AutoGenerate 1;
+
+
+
+//doplň svoje user name ak máš názov konektora s vlastným meno
+SET dUser = '';
+LET dConnectorOwner = If(
+							Len(Trim('$(dUser)'))=0
+                            ,'',
+                            ' (workshopvm_'&'$(dUser)'&')'
+                          );
+
+
+//Premenná pre pre zmenu prostredia
+SET Envi = 'DEV'; // 'PROD'/'DEV' - zvoliť podľa toho v akom režime ide appka
+//Premenné pre konektory
+SET dDEV = 'lib://0_DEV$(dConnectorOwner)/';
+SET dPROD = 'lib://0_PROD$(dConnectorOwner)/';
+SET dGovernance = 'lib://1_Governance($(Envi))$(dConnectorOwner)/';
+SET dInput = 'lib://2_Input($(Envi))$(dConnectorOwner)/';
+SET dQVD = 'lib://3_QVD($(Envi))$(dConnectorOwner)/';
+
+SET dDatabase = 'DB_Database($(Envi))';
+
+
+//povínné načítanie základných premenných prostredia
+$(Must_Include=[$(dGovernance)Global_Var_Environment_SK.qvs]);
+$(Must_Include=[$(dGovernance)Global_Var_Numbers.qvs]);
+
+
+
+SET HidePrefix = '%'; //kľúčové polia nevhodné pre objekty
+SET HideSuffix = '_ID'; //zložené kľúče nevhodné pre objekty
+
+SET DISABLE_AUTO_CHART = 1;
+SET DISABLE_INSIGHTS = 0;
+
+
+Search Exclude '%*','#*';
+
+LIB CONNECT TO '$(dDatabase)';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 LIB CONNECT TO 'DB_Database(DEV)';
