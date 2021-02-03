@@ -1,0 +1,667 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 55,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 11,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 6,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 9,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 9,
+    "qTags": [
+      "$key",
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "Address",
+    "qCardinal": 92,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "CatalogPrice",
+    "qCardinal": 60,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Products"
+    ]
+  },
+  {
+    "qName": "CategoryID",
+    "qCardinal": 8,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Categories",
+      "Products"
+    ]
+  },
+  {
+    "qName": "CategoryName",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Categories"
+    ]
+  },
+  {
+    "qName": "City",
+    "qCardinal": 70,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "CompanyName",
+    "qCardinal": 92,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "ContactName",
+    "qCardinal": 92,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Country",
+    "qCardinal": 21,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "CustomerID",
+    "qCardinal": 92,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order",
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Description",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Categories"
+    ]
+  },
+  {
+    "qName": "Discount",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Order Details"
+    ]
+  },
+  {
+    "qName": "DivisionID",
+    "qCardinal": 4,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Customers",
+      "Divisions"
+    ]
+  },
+  {
+    "qName": "DivisionName",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Divisions"
+    ]
+  },
+  {
+    "qName": "EmployeeID",
+    "qCardinal": 35,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order",
+      "Employee"
+    ]
+  },
+  {
+    "qName": "Extension",
+    "qCardinal": 25,
+    "qTags": [],
+    "qSrcTables": [
+      "Employee"
+    ]
+  },
+  {
+    "qName": "Fax",
+    "qCardinal": 70,
+    "qTags": [],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "First Name",
+    "qCardinal": 34,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee"
+    ]
+  },
+  {
+    "qName": "Freight",
+    "qCardinal": 6518,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Order"
+    ]
+  },
+  {
+    "qName": "Hire Date",
+    "qCardinal": 34,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Employee"
+    ]
+  },
+  {
+    "qName": "Last Name",
+    "qCardinal": 35,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee"
+    ]
+  },
+  {
+    "qName": "LineNo",
+    "qCardinal": 25,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order Details"
+    ]
+  },
+  {
+    "qName": "Office",
+    "qCardinal": 5,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Employee",
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficeAddress",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficeCity",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficeCountry",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficeFax",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficePhone",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficePostalCode",
+    "qCardinal": 5,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OfficeStateProvince",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Offices"
+    ]
+  },
+  {
+    "qName": "OrderDate",
+    "qCardinal": 1494,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Order"
+    ]
+  },
+  {
+    "qName": "OrderID",
+    "qCardinal": 6571,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order",
+      "Order Details"
+    ]
+  },
+  {
+    "qName": "Phone",
+    "qCardinal": 92,
+    "qTags": [],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "PostalCode",
+    "qCardinal": 84,
+    "qTags": [],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "ProductID",
+    "qCardinal": 77,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order Details",
+      "Products"
+    ]
+  },
+  {
+    "qName": "ProductName",
+    "qCardinal": 77,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Products"
+    ]
+  },
+  {
+    "qName": "Quantity",
+    "qCardinal": 150,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order Details"
+    ]
+  },
+  {
+    "qName": "QuantityPerUnit",
+    "qCardinal": 25,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Products"
+    ]
+  },
+  {
+    "qName": "Reports To",
+    "qCardinal": 14,
+    "qTags": [],
+    "qSrcTables": [
+      "Employee"
+    ]
+  },
+  {
+    "qName": "ShipperID",
+    "qCardinal": 5,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Order"
+    ]
+  },
+  {
+    "qName": "StateProvince",
+    "qCardinal": 11,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "SupplierID",
+    "qCardinal": 29,
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Products",
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.Address",
+    "qCardinal": 29,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.City",
+    "qCardinal": 29,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.CompanyName",
+    "qCardinal": 29,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.ContactName",
+    "qCardinal": 29,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.Country",
+    "qCardinal": 16,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.Fax",
+    "qCardinal": 29,
+    "qTags": [],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.Phone",
+    "qCardinal": 29,
+    "qTags": [],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Suppliers.PostalCode",
+    "qCardinal": 29,
+    "qTags": [],
+    "qSrcTables": [
+      "Suppliers"
+    ]
+  },
+  {
+    "qName": "Title",
+    "qCardinal": 10,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Employee"
+    ]
+  },
+  {
+    "qName": "UnitCost",
+    "qCardinal": 75,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Products"
+    ]
+  },
+  {
+    "qName": "UnitPrice",
+    "qCardinal": 16543,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Order Details"
+    ]
+  },
+  {
+    "qName": "UnitsInStock",
+    "qCardinal": 51,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Products"
+    ]
+  },
+  {
+    "qName": "UnitsOnOrder",
+    "qCardinal": 10,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Products"
+    ]
+  },
+  {
+    "qName": "Year Salary",
+    "qCardinal": 24,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Employee"
+    ]
+  }
+]

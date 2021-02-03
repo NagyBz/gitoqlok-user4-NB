@@ -1,0 +1,95 @@
+///$tab Dims
+Categories:
+LOAD 
+	CategoryID,
+    CategoryName,
+    Description;
+SQL SELECT
+*
+FROM Categories;
+
+
+Customers:
+LOAD 
+	Address,
+    City,
+    CompanyName,
+    ContactName,
+    Country,
+    CustomerID,
+    DivisionID,
+    Fax,
+    Phone,
+    PostalCode,
+    StateProvince;
+SQL SELECT 
+*
+FROM Customers;
+
+Products:
+LOAD
+	CategoryID,
+    ProductID,
+    ProductName,
+    QuantityPerUnit,
+    SupplierID,
+    UnitCost,
+    UnitPrice as CatalogPrice,
+    UnitsInStock,
+    UnitsOnOrder;
+SQL SELECT
+*
+FROM Products;
+
+Divisions:
+LOAD DivisionID,
+    DivisionName;
+SQL SELECT 
+*
+FROM Divisions;
+
+Employee:
+LOAD
+    EmpID as EmployeeID,
+    "Last Name",
+    "First Name",
+    Title,
+    "Hire Date",
+    Office,
+    "Extension",
+    "Reports To",
+    "Year Salary"
+FROM [lib://2_Input(DEV)/EmpOff.xls]
+(biff, embedded labels, table is Employee$);
+
+Offices:
+LOAD
+    Office,
+    OfficeAddress,
+    OfficePostalCode,
+    OfficeCity,
+    OfficeStateProvince,
+    OfficePhone,
+    OfficeFax,
+    OfficeCountry
+FROM [lib://2_Input(DEV)/EmpOff.xls]
+(biff, embedded labels, table is Office$);
+
+Qualify *;
+Unqualify SupplierID;
+
+Suppliers:
+LOAD
+    SupplierID,
+    CompanyName,
+    ContactName,
+    Address,
+    City,
+    PostalCode,
+    Country,
+    Phone,
+    Fax
+FROM [lib://2_Input(DEV)/Suppliers.xml]
+(XmlSimple, table is [Suppliers/_empty_]);
+
+Unqualify *;

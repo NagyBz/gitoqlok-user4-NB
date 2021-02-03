@@ -1,0 +1,23 @@
+///$tab Main
+SET ThousandSep=' ';
+SET DecimalSep=',';
+SET MoneyThousandSep=' ';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='# ##0,00 €;-# ##0,00 €';
+SET TimeFormat='h:mm:ss';
+SET DateFormat='D. M. YYYY';
+SET TimestampFormat='D. M. YYYY h:mm:ss[.fff]';
+SET FirstWeekDay=0;
+SET BrokenWeeks=0;
+SET ReferenceDay=4;
+SET FirstMonthOfYear=1;
+SET CollationLocale='sk-SK';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='jan;feb;mar;apr;máj;jún;júl;aug;sep;okt;nov;dec';
+SET LongMonthNames='január;február;marec;apríl;máj;jún;júl;august;september;október;november;december';
+SET DayNames='po;ut;st;št;pi;so;ne';
+SET LongDayNames='pondelok;utorok;streda;štvrtok;piatok;sobota;nedeľa';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+LIB CONNECT TO 'DB_Database(DEV)';

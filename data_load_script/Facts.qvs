@@ -1,0 +1,26 @@
+///$tab Facts
+Order:
+LOAD CustomerID,
+    EmployeeID,
+    Freight,
+    year(OrderDate)  as Year,
+    month(OrderDate) as Month,
+    day(OrderDate)   as Day,
+    'Q' as Quarter,
+    OrderID,
+    ShipperID;
+SQL SELECT 
+*
+FROM Orders;
+
+
+[Order Details]:
+LOAD Discount,
+    LineNo,
+    OrderID,
+    ProductID,
+    Quantity,
+    UnitPrice;
+SQL SELECT
+*
+FROM `Order Details`;
