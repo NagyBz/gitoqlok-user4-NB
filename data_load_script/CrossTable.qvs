@@ -1,0 +1,24 @@
+///$tab CrossTable
+// Budget:
+// CrossTable  (Year,Budget,2)
+// LOAD
+//     Budget,
+//     F2,
+//     F3,
+//     F4,
+//     F5,
+//     F6,
+//     F7
+// FROM [lib://2_Input(DEV)/Budget.xls]
+// (biff, embedded labels, table is EmployeeBudget$);
+
+Parts:
+CrossTable (Order,PartCode)
+LOAD
+    OrderNo,
+    Part1,
+    Part2,
+    Part3,
+    Part4
+FROM [lib://2_Input(DEV)/CrossTable_sample.xlsx]
+(ooxml, embedded labels, table is Sheet1);
