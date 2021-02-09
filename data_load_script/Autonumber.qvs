@@ -1,0 +1,15 @@
+///$tab Autonumber
+LOAD
+   Autonumber(key) as key,
+    Expression1,
+    Expression2
+FROM [lib://2_Input(DEV)/Autonumber/Data.qvd]
+(qvd);
+
+LOAD
+     Autonumber(key) as key,
+    Dim1,
+    Dim2,
+    Dim3
+FROM [lib://2_Input_DEV (workshopvm_user3)/Autonumber/Dim.qvd]
+(qvd);

@@ -1,14 +1,4 @@
 ///$tab Dims
-Dim_Categories:
-LOAD 
-	CategoryID,
-    CategoryName,
-    Description;
-SQL SELECT
-*
-FROM Categories;
-
-
 Dim_Customers:
 LOAD 
 	Address,
@@ -43,6 +33,22 @@ SQL SELECT
 FROM Products;
 
 
+let NoRows=NoOfRows('Dim_Products');
+
+Trace <<<<<<<< number of rows in Dim_Products : $(NoRows);
+
+
+Dim_Categories:
+left join (Dim_Products)
+LOAD 
+	CategoryID,
+    CategoryName,
+    Description;
+SQL SELECT
+*
+FROM Categories;
+
+
 
 Dim_Divisions:
 LOAD DivisionID,
@@ -64,22 +70,39 @@ LOAD
 FROM [$(dInput)EmpOff.xls]
 (biff, embedded labels, table is Employee$);
 
+LOAD
+    EmpID as EmployeeID,
+    "Last Name" &' '&"First Name" as Name,
+    Title,
+    "Hire Date",
+    Office,
+    "Extension",
+    "Reports To",
+    "Year Salary"
+FROM [$(dInput)/Employees_New.xls]
+(biff, embedded labels, table is Employee$);
+
 
 Dim_SalesPeople:
+left Keep (Fact_Order)
 Load
 	EmployeeID,
 	Name as SalesPerson,
 	Title as SalesTitle
 resident Dim_Employee
-where 
-Exists(Tmp_EmployeeID,EmployeeID)
+
+//where 
+//Exists(Tmp_EmployeeID,EmployeeID)
 // Title = 'Storeman'
 // or Title like 'Sales*'
 ;
 
 
 
+
+
 Dim_Offices:
+left join (Dim_Employee)
 LOAD
     Office,
     OfficeAddress,
@@ -96,6 +119,7 @@ Qualify *;
 Unqualify SupplierID;
 
 Dim_Suppliers:
+left join (Dim_Products)
 LOAD
     SupplierID,
     CompanyName,

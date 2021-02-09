@@ -1,0 +1,7 @@
+///$tab sub
+// Sub SubStoreAndDrop(pQvdtable)
+
+// Store [$(pQvdtable)] into [$(dQVD)1_Final/BN/$(pQvdtable).qvd](qvd);
+// Drop Table [$(pQvdtable)];
+
+// end sub

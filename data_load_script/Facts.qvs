@@ -1,12 +1,16 @@
 ///$tab Facts
 Fact_Order:
-LOAD CustomerID,
+LOAD 
+    'Order' as Source,
+	CustomerID,
     EmployeeID,
     EmployeeID as Tmp_EmployeeID,
     Freight,
-    year(OrderDate)  as Year,
-    month(OrderDate) as Month,
-    day(OrderDate)   as Day,
+//    OrderDate,
+    floor(OrderDate) as %Date,
+//     year(OrderDate)  as Year,
+//     month(OrderDate) as Month,
+//     day(OrderDate)   as Day,
     'Q'& ceil(month(OrderDate)/3) as Quarter,    //vypocitaj kvartal
     OrderID,
     ShipperID,
@@ -14,6 +18,13 @@ LOAD CustomerID,
 SQL SELECT 
 *
 FROM Orders;
+
+
+ call SubTraceNoORows('Fact_Order');
+
+
+//Store [$(pQvdtable)] into [$(dQVD)1_Final/BN/$(pQvdtable).qvd](qvd);
+//Drop Table $(pQvdtable)];
 
 
 //[Fact_OrderDetails]:
@@ -24,10 +35,8 @@ Margin/LineSalesAmount as margin%;
 load *,
 LineSalesAmount - LineCostAmount as Margin;
 LOAD 
-	UnitPrice * (1-Discount)* Quantity 				 as LineSalesAmount,
-   // UnitCost* Quantity                 as LineCostAmount,
-    ApplyMap('Map_UnitCost2Orderdetails',ProductID,0) as LineCostAmount,
-    
+	UnitPrice * (1-Discount)* Quantity 				  as		LineSalesAmount,
+    ApplyMap('Map_UnitCost2Orderdetails',ProductID,0) as		LineCostAmount,
 	Discount,
     LineNo,
     OrderID,
@@ -41,15 +50,17 @@ FROM `Order Details`;
 
 
 Fact_Shipments:
+Concatenate (Fact_Order)
 LOAD 
-	OrderID&'|'&ProductID as OrderProduct_ID,
-	//CustomerID,
-   // EmployeeID,
-   // LineNo,
-   // OrderID,
-    //ProductID,
+	'Shipment' as Source,
+	//OrderID&'|'&ProductID as OrderProduct_ID,
+	CustomerID as %CustomerID,
+    EmployeeID,
+    LineNo,
+    OrderID,
+    ProductID,
     ShipmentDate,
-    //ShipperID
+    ShipperID
     ;
 SQL SELECT *
 FROM Shipments;

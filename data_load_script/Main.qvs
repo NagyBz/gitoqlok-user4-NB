@@ -43,31 +43,3 @@ SET DISABLE_INSIGHTS = 0;
 Search Exclude '%*','#*';
 
 LIB CONNECT TO '$(dDatabase)';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-LIB CONNECT TO 'DB_Database(DEV)';

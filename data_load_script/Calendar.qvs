@@ -1,0 +1,41 @@
+///$tab Calendar
+//min max date
+Tmp_MinMax:
+Load
+min(%Date) as MinDate,
+max(%Date) as MaxDate
+
+Resident Fact_Order;
+
+let vMinDate = peek('MinDate',0,'Tmp_MinMax');
+let vMaxDate = peek('MaxDate',0,'Tmp_MinMax');
+let Today= $(vMaxDate);
+
+Drop table  Tmp_MinMax;
+
+
+// generovat kompletny kalendar
+
+Tmp_Calendar:
+load $(vMinDate) + Rowno()-1 as TmpDate
+AutoGenerate
+	$(vMaxDate)-$(vMinDate)+1;
+    
+    
+//vytvorenie poli v kalendari
+
+MasterCalendar:
+load
+TmpDate as %Date,
+Date(TmpDate) as Date,
+Year(TmpDate) as Year,
+Month(TmpDate) as Month,
+Week(TmpDate) as Week,
+Day(TmpDate) as Day,
+//'Q'&ceil(month(TmpDate)/3) as Quarter,
+Month(TmpDate)&'-'&Year(TmpDate) as MonthYear
+//-1*InYearToDate(TmpDate, $(vToday),0) as @YtdCY,
+//1*InYearToDate(TmpDate, $(vToday),-1) as @YtdLY
+resident Tmp_Calendar;
+
+Drop table Tmp_Calendar;

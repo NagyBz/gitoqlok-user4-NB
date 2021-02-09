@@ -1,0 +1,8 @@
+///$tab Subrutine - Trace
+// Sub SubTraceNoORows(pSourceTable)
+
+// let noRows = NoOfRows('$(pSourceTable)');
+
+// Trace <<<<<<<<< No of rows in '$(pSourceTable)' : $(noRows);
+
+// End Sub

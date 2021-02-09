@@ -1,0 +1,78 @@
+///$tab Data Load
+/*LOAD
+    Rok,
+    Mesiac,
+    Zakaznik_ID,
+    Cerpanie
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Cerpanie$);
+
+LOAD
+    Rok,
+    Mesiac,
+    Zakaznik_ID,
+    Rozpocet
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Rozpocet$);
+
+
+LOAD
+    Zakaznik_ID,
+    Zakaznik
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Zakaznici$);
+*/
+
+
+////////////////////////////////////////////////////////////////////////////
+/*
+LOAD
+ Rok &'|'&Mesiac&'|'&Zakaznik_ID as RokMesiacZakaznikID,
+//     Rok,
+//     Mesiac,
+//     Zakaznik_ID,
+    Rozpocet
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Rozpocet$);
+
+
+LOAD
+    Zakaznik_ID,
+    Zakaznik
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Zakaznici$);
+
+LOAD
+    Rok &'|'&Mesiac&'|'&Zakaznik_ID as RokMesiacZakaznikID,
+    Rok,
+     Mesiac,
+     Zakaznik_ID,
+    Cerpanie
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Cerpanie$);
+*/
+Cerpanie:
+LOAD
+    'Cerpanie' as Fact,
+     Rok,
+     Mesiac,
+     Zakaznik_ID,
+    Cerpanie
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Cerpanie$);
+Concatenate (Cerpanie)
+LOAD
+'Rozpocet' as Fact,
+    Rok,
+    Mesiac,
+    Zakaznik_ID,
+    Rozpocet
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Rozpocet$);
+
+
+LOAD
+    Zakaznik_ID,
+    Zakaznik
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Zakaznici$);
