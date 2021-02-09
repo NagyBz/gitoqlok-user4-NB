@@ -51,18 +51,28 @@ LOAD
 FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
 (biff, embedded labels, table is Cerpanie$);
 */
+
+LOAD
+    Zakaznik_ID,
+    Zakaznik
+FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
+(biff, embedded labels, table is Zakaznici$);
+
 Cerpanie:
 LOAD
-    'Cerpanie' as Fact,
+    Rok&'|'&Mesiac&'|'&Zakaznik_ID as RokMesiacZakaznik_ID,
+    Rok&'|'&Mesiac&'|'&Zakaznik_ID as TMPRokMesiacZakaznik_ID,
      Rok,
      Mesiac,
      Zakaznik_ID,
     Cerpanie
 FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
 (biff, embedded labels, table is Cerpanie$);
-Concatenate (Cerpanie)
+
+
+Rozpocet:
 LOAD
-'Rozpocet' as Fact,
+    Rok&'|'&Mesiac&'|'&Zakaznik_ID as RokMesiacZakaznik_ID,
     Rok,
     Mesiac,
     Zakaznik_ID,
@@ -71,8 +81,33 @@ FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
 (biff, embedded labels, table is Rozpocet$);
 
 
-LOAD
+Link_Table:
+NoConcatenate
+load Distinct
+	Rok,
+    Mesiac,
     Zakaznik_ID,
-    Zakaznik
-FROM [lib://2_Input(DEV)/LinkTable/Cerpanie_Rozpocet.xls]
-(biff, embedded labels, table is Zakaznici$);
+    RokMesiacZakaznik_ID
+    Resident Cerpanie;
+    
+
+Concatenate(Link_Table)
+load Distinct
+	Rok,
+    Mesiac,
+    Zakaznik_ID,
+    RokMesiacZakaznik_ID
+resident Rozpocet
+where not Exists(TMPRokMesiacZakaznik_ID,RokMesiacZakaznik_ID);
+
+Drop Fields 
+	Rok,
+    Mesiac,
+    Zakaznik_ID
+From Cerpanie;
+
+Drop Fields 
+	Rok,
+    Mesiac,
+    Zakaznik_ID
+From Rozpocet;
