@@ -16,9 +16,55 @@ Parts:
 CrossTable (Order,PartCode)
 LOAD
     OrderNo,
-    Part1,
-    Part2,
-    Part3,
-    Part4
+    Part1 as 1,
+    Part2 as 2,
+    Part3 as 3,
+    Part4 as 4
 FROM [lib://2_Input(DEV)/CrossTable_sample.xlsx]
 (ooxml, embedded labels, table is Sheet1);
+
+
+Price:
+CrossTable(Order, Price)
+LOAD
+    OrderNo,
+    Price1 as 1,
+    Price2 as 2,
+    Price3 as 3,
+    Price4 as 4
+FROM [lib://2_Input(DEV)/CrossTable_sample.xlsx]
+(ooxml, embedded labels, table is Sheet1);
+
+
+Quantity:
+CrossTable(Order, Quantity)
+LOAD
+    OrderNo,
+    Quantity1 as 1,
+    Quantity2 as 2,
+    Quantity3 as 3,
+    Quantity4 as 4
+FROM [lib://2_Input(DEV)/CrossTable_sample.xlsx]
+(ooxml, embedded labels, table is Sheet1);
+
+
+
+
+
+left Join (Parts)
+Load
+* 
+Resident  Price;
+
+Drop table Price;
+
+
+
+
+
+left Join (Parts)
+Load
+* 
+Resident  Quantity;
+
+Drop table Quantity;
