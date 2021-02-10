@@ -1,26 +1,50 @@
 ///$tab For Next
-Tmp_nazov:
-load * inline [
-NazovTb
-Categories
-Customers
-Divisions
-Order Details
-Orders
-Products
-Shipments
-Shippers
-];
+// Tmp_nazov:
+// load * inline [
+// NazovTb
+// Categories
+// Customers
+// Divisions
+// Order Details
+// Orders
+// Products
+// Shipments
+// Shippers
+// ];
 
+
+Sql_Tables:
+SQLTables;
+
+Tmp_nazov:
+load 
+TABLE_NAME as NazovTb
+Resident Sql_Tables
+where TABLE_TYPE = 'TABLE';
+
+Drop Table Sql_Tables;
 
 for vRowNo = 0 to NoOfRows('Tmp_nazov')-1 
 	
     Let vNazovTb= peek('NazovTb',vRowNo,'Tmp_nazov');
     
     [RAW_$(vNazovTb)]:
-    Load * ;
+    Load *,
+    now() 			as ExtractTime,
+    '$(vNazovTb)'   as SourceName;
     SQL select * From [$(vNazovTb)];
-    Store [RAW_$(vNazovTb)] into [$(dQVD)0_RAW\BN/RAW_$(vNazovTb).qvd](qvd);
+    Store [RAW_$(vNazovTb)] into [$(dQVD)0_RAW\BN_New/RAW_$(vNazovTb).qvd](qvd);
     Drop table  [RAW_$(vNazovTb)];
     
 next vRowNo;
+
+Sql_Tables:
+SQLTables;
+
+Tmp_nazov:
+load 
+TABLE_NAME as NazovTb
+Resident Sql_Tables
+where TABLE_TYPE = 'TABLE';
+
+Drop Table Sql_Tables;

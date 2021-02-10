@@ -5,3 +5,14 @@ Store [$(pQvdtable)] into [$(dQVD)0_RAW/BN/$(pQvdtable).qvd](qvd);
 Drop Table [$(pQvdtable)];
 
 end sub
+
+Sub StoreAndDropAllTables
+
+for vTableCount = 1 to NoOfTables()-1
+  ListOfTables:
+  load $(vTableCount)  as No,
+  TableName($(vTableCount)) as Table
+  AutoGenerate  1;	 
+next vTableCount
+
+end Sub

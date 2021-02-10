@@ -1,52 +1,52 @@
 ///$tab Subrutine - Calendar
-// sub SubCalendar(pTableName, pDateField, pCalendarName, pPrefix)
+sub SubCalendar(pTableName, pDateField, pCalendarName, pPrefix)
 
-// LET pTable = PurgeChar('$(pTableName)', '"[]');
-// LET pDate = PurgeChar('$(pDateField)', '"[]');
-// LET pCalName = if(len('$(pCalendarName)')=0, 'MasterCalendar', '$(pCalendarName)');
-// LET pCalPfx = if(len('$(pPrefix)')=0, '', '$(pPrefix)');
-// //-----------------------------------------------------------------------------
+LET pTable = PurgeChar('$(pTableName)', '"[]');
+LET pDate = PurgeChar('$(pDateField)', '"[]');
+LET pCalName = if(len('$(pCalendarName)')=0, 'MasterCalendar', '$(pCalendarName)');
+LET pCalPfx = if(len('$(pPrefix)')=0, '', '$(pPrefix)');
+//-----------------------------------------------------------------------------
 
-// Tmp_MinMax:
-// load
-// min($(pDate)) as MinDate,
-// max($(pDate)) as MaxDate
-// resident '$(pTable)';
+Tmp_MinMax:
+load
+min($(pDate)) as MinDate,
+max($(pDate)) as MaxDate
+resident '$(pTable)';
 
-// LET vMinDate = peek('MinDate',0,'Tmp_MinMax');
-// LET vMaxDate = peek('MaxDate',0,'Tmp_MinMax');
-// LET vToday = $(vMaxDate);
+LET vMinDate = peek('MinDate',0,'Tmp_MinMax');
+LET vMaxDate = peek('MaxDate',0,'Tmp_MinMax');
+LET vToday = $(vMaxDate);
 
-// Drop table Tmp_MinMax;
+Drop table Tmp_MinMax;
 
-// Tmp_Calendar:
-// load
-// $(vMinDate)+RowNo()-1 as TmpDate
-// AutoGenerate
-// $(vMaxDate)-$(vMinDate)+1;
+Tmp_Calendar:
+load
+$(vMinDate)+RowNo()-1 as TmpDate
+AutoGenerate
+$(vMaxDate)-$(vMinDate)+1;
 
-// [$(pCalName)]:
-// load
-// TmpDate as [$(pDateField)],
-// Date(TmpDate) as [$(pCalPfx)Date],
-// Year(TmpDate) as [$(pCalPfx)Year],
-// Month(TmpDate) as [$(pCalPfx)Month],
-// Week(TmpDate) as [$(pCalPfx)Week],
-// Day(TmpDate) as [$(pCalPfx)Day],
-// 'Q' & ceil(Month(TmpDate)/3) as [$(pCalPfx)Quarter],
-// Month(TmpDate)&'-'&Year(TmpDate) as [$(pCalPfx)MonthYear],
-// -1*InYearToDate(TmpDate, $(vToday), 0 ) as [@$(pCalPfx)YtdCY],
-// -1*InYearToDate(TmpDate, $(vToday), -1 ) as [@$(pCalPfx)YtdLY]
-// resident Tmp_Calendar;
+[$(pCalName)]:
+load
+TmpDate as [$(pDateField)],
+Date(TmpDate) as [$(pCalPfx)Date],
+Year(TmpDate) as [$(pCalPfx)Year],
+Month(TmpDate) as [$(pCalPfx)Month],
+Week(TmpDate) as [$(pCalPfx)Week],
+Day(TmpDate) as [$(pCalPfx)Day],
+'Q' & ceil(Month(TmpDate)/3) as [$(pCalPfx)Quarter],
+Month(TmpDate)&'-'&Year(TmpDate) as [$(pCalPfx)MonthYear],
+-1*InYearToDate(TmpDate, $(vToday), 0 ) as [@$(pCalPfx)YtdCY],
+-1*InYearToDate(TmpDate, $(vToday), -1 ) as [@$(pCalPfx)YtdLY]
+resident Tmp_Calendar;
 
-// Drop table Tmp_Calendar;
+Drop table Tmp_Calendar;
 
-// LET pTable = ;
-// LET pDate = ;
-// LET pCalName = ;
-// LET pCalPfx = ;
-// LET vMinDate = ;
-// LET vMaxDate = ;
-// LET vToday = ;
+LET pTable = ;
+LET pDate = ;
+LET pCalName = ;
+LET pCalPfx = ;
+LET vMinDate = ;
+LET vMaxDate = ;
+LET vToday = ;
 
-// end sub
+end sub
