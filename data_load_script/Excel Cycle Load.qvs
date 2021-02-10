@@ -32,8 +32,8 @@ for i = 0 to NoOfRows('SQLTable')-1
       "10",
       "11",
       "12"
-  FROM [lib://2_Input(DEV) (workshopvm_user6)/Aero/Zamestnanci.xls]
-  (biff, embedded labels, table is PlnyUvazok$);
+  FROM [lib://2_Input(DEV)/Aero/Zamestnanci.xls]
+  (biff, embedded labels, table is [$(vSheetName)]);
 
 
 next i;
