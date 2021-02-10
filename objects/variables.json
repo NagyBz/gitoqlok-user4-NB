@@ -1,1 +1,360 @@
-[]
+[
+  {
+    "qInfo": {
+      "qId": "11ff49e5-236d-4e10-adae-c05f11edf03a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPerc1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,0%",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "19ed5308-efbe-4759-81d6-4317844792d3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEU1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,0 €;-# ##0,0 €",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "1ac81a39-3fc8-4eea-ad65-f0532fe983d4",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dUser",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "20dfbfdb-d9af-4466-9f1d-6cf979c7781e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dInput",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://2_Input(DEV)/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "2cd8bab9-2427-43fc-bc70-5162e8c396d1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "372c4cce-034c-457b-ac7f-87f6d9e9d49c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dGovernance",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://1_Governance(DEV)/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "4c98849d-cbf4-416e-8b4e-96d3eb204229",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "Envi",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "DEV",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "5652403e-892c-4a5d-b2c5-5f1d3bce83b7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "DISABLE_INSIGHTS",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "5df9cc25-a808-458d-92a0-53252d88c379",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPcs",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 pcs",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "687320c7-0d01-42ee-aab5-bc94f31c720a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dConnectorOwner",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "689a9f80-35a2-48ef-b67a-4dcbfdb05c99",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPerc",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 %",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "79079e38-67a9-4135-8848-425c87553675",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "a0244e09-3ffd-4d00-9a7d-23137b352c0f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEU2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00 €;-# ##0,00 €",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "af866772-e580-41e6-aab5-c8ec7de6a892",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPerc2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00%",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "bc89228f-0e03-45df-bbb1-eecc173aa276",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "bfe0e6a3-df4a-4116-bf9c-cfbfb19bb2b0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dDEV",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://0_DEV/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "c1d4b8ad-801d-480f-9c83-701fc6f212c8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEU",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 €;-# ##0 €",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "c7461984-8733-4eea-a5a7-c3f21f6086d1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dPROD",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://0_PROD/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "d2546f96-184a-47cb-9f43-563a9ab37340",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEUTh",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 t€;-# ##0 t€",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "d88d6833-af11-4fa9-a294-01319907b164",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dDatabase",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "DB_Database(DEV)",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "e77439e8-f6a0-4948-b3cd-e67b05d48776",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum2Th",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00 ths",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "eeba86c9-933d-42a3-b844-8e4897069c5a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPcsTh",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 tpcs",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "f9cef6c6-ca59-4548-888b-1a5c818f80b4",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dQVD",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://3_QVD(DEV)/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "fd812ba5-e3ce-45e7-a590-9c5c00dbdd6f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "DISABLE_AUTO_CHART",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "qIsScriptCreated": true
+  }
+]
