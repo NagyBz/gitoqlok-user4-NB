@@ -15,4 +15,12 @@ for vTableCount = 1 to NoOfTables()-1
   AutoGenerate  1;	 
 next vTableCount
 
+
+for vRowNo = 0 to NoOfRows('ListOfTables')-1
+	let vTableName= peek('Table',vRowNo,'ListOfTables');
+	call SubStoreAndDrop('$(vTableName)');
+next vRowNo;
+    
+drop table ListOfTables;
+
 end Sub

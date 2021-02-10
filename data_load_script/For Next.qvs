@@ -33,8 +33,8 @@ for vRowNo = 0 to NoOfRows('Tmp_nazov')-1
     now() 			as ExtractTime,
     '$(vNazovTb)'   as SourceName;
     SQL select * From [$(vNazovTb)];
-    Store [RAW_$(vNazovTb)] into [$(dQVD)0_RAW\BN_New/RAW_$(vNazovTb).qvd](qvd);
-    Drop table  [RAW_$(vNazovTb)];
+//     Store [RAW_$(vNazovTb)] into [$(dQVD)0_RAW\BN_New/RAW_$(vNazovTb).qvd](qvd);
+//     Drop table  [RAW_$(vNazovTb)];
     
 next vRowNo;
 
@@ -48,3 +48,6 @@ Resident Sql_Tables
 where TABLE_TYPE = 'TABLE';
 
 Drop Table Sql_Tables;
+
+
+call StoreAndDropAllTables('ghef');

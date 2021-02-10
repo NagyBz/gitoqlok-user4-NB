@@ -1,0 +1,39 @@
+///$tab Excel Cycle Load
+LIB CONNECT TO 'Excel ODBC-AeroZam';
+
+SQLTable:
+SQLTables;
+
+
+
+for i = 0 to NoOfRows('SQLTable')-1
+
+  let  vSheetName = peek ('TABLE_NAME',i,'SQLTable');
+
+
+
+  Zamestnanci:
+  CrossTable(Month,NumberOfEmployes,5)
+  LOAD
+      '$(vSheetName)' as SheetSource,
+      ID_TypLeteckejSpolocnosti,
+      ID_LeteckaSpolocnost,
+      ID_Lietadlo,
+      Rok,
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12"
+  FROM [lib://2_Input(DEV) (workshopvm_user6)/Aero/Zamestnanci.xls]
+  (biff, embedded labels, table is PlnyUvazok$);
+
+
+next i;
