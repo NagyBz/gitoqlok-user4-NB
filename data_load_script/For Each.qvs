@@ -1,0 +1,5 @@
+///$tab For Each
+LOAD
+   *
+FROM [lib://3_QVD(DEV)/0_RAW/RAW_DataLety20**.qvd]
+(qvd);
