@@ -1,0 +1,32 @@
+///$tab Incremental Load
+// Fact_Incremental_Orders:
+// LOAD
+//     OrderID,
+//     ChangeDate,
+//     Sales
+// FROM [lib://2_Input(DEV)/Incremental/Orders.xls]
+// (biff, embedded labels, table is Orders$);
+
+// call SubStoreAndDrop('Fact_Incremental_Orders')
+
+
+MaxOrderID:
+load 
+max(OrderID) as MaxID
+from  [$(dQVD)0_RAW/BN/Fact_Incremental_Orders.qvd](qvd);
+
+let vMaxID= peek('MaxID',0);
+
+drop table MaxOrderID;
+
+
+Fact_Incremental_Orders:
+LOAD
+    OrderID,
+    ChangeDate,
+    Sales
+FROM [lib://2_Input(DEV)/Incremental/Orders.xls]
+(biff, embedded labels, table is Orders$)
+where OrderID > vMaxID;
+
+call SubStoreAndDrop('Fact_Incremental_Orders')
