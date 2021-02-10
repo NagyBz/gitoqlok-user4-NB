@@ -1,0 +1,26 @@
+///$tab For Next
+Tmp_nazov:
+load * inline [
+NazovTb
+Categories
+Customers
+Divisions
+Order Details
+Orders
+Products
+Shipments
+Shippers
+];
+
+
+for vRowNo = 0 to NoOfRows('Tmp_nazov')-1 
+	
+    Let vNazovTb= peek('NazovTb',vRowNo,'Tmp_nazov');
+    
+    [RAW_$(vNazovTb)]:
+    Load * ;
+    SQL select * From [$(vNazovTb)];
+    Store [RAW_$(vNazovTb)] into [$(dQVD)0_RAW\BN/RAW_$(vNazovTb).qvd](qvd);
+    Drop table  [RAW_$(vNazovTb)];
+    
+next vRowNo;

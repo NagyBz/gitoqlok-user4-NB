@@ -1,5 +1,12 @@
 ///$tab For Each
+
+For Each vFile in FileList ('lib://3_QVD(DEV)/0_RAW/RAW_DataLety20**.qvd')
+
+
+[Data Lety]:
 LOAD
    *
-FROM [lib://3_QVD(DEV)/0_RAW/RAW_DataLety20**.qvd]
+FROM [$(vFile)]
 (qvd);
+
+Next vFile
