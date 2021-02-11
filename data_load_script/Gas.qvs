@@ -1,0 +1,14 @@
+///$tab Gas 
+Dim_PHM:
+LOAD
+Država as Country,
+"Zadnja sprememba" as DatePHM,
+subfield(if(SubStringCount("95",'(')>0, TextBetween("95",'(',')'),"95" ),' ',1) as "95 €",
+subfield(if(SubStringCount("98",'(')>0, TextBetween("98",'(',')'),"98" ),' ',1) as "98 €",
+subfield(if(SubStringCount("Diesel",'(')>0, TextBetween("Diesel",'(',')'),"Diesel" ),' ',1) as "Diesel €",
+Subfield(If(SubStringCount("95",'(')>0,SubField("95",'(',1),"95"),' ',2) as "Local Currency",
+Num(Subfield(If(SubStringCount("95",'(')>0,SubField("95",'(',1),"95"),' ',1),'##0,000',Chr(44),Chr(32)) as "95 LC",
+Num(Subfield(If(SubStringCount("98",'(')>0,SubField("98",'(',1),"98"),' ',1),'##0,000',Chr(44),Chr(32)) as "98 LC",
+Num(Subfield(If(SubStringCount("Diesel",'(')>0,SubField("Diesel",'(',1),"Diesel"),' ',1),'##0,000',Chr(44),Chr(32)) as "Diesel LC"
+FROM [lib://WebPHM]
+(html, utf8, embedded labels, table is @1);

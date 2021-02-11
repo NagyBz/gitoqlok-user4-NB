@@ -1,1 +1,514 @@
-[]
+[
+  {
+    "qInfo": {
+      "qId": "08419555-ee5f-43be-92ac-1ecd8eb90b1c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "i",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "3"
+  },
+  {
+    "qInfo": {
+      "qId": "0a071f91-2806-440c-8f08-7e3cac353a9b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dConnectorOwner",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "0e28297c-0423-4d82-b01c-423e1724d54b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "DISABLE_AUTO_CHART",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "1504aaf5-1ca3-4a9d-9f1e-7abe761fed4f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vFile",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://3_QVD(DEV)/0_RAW/RAW_DataLety2016.qvd"
+  },
+  {
+    "qInfo": {
+      "qId": "18ffc7fa-95df-4bef-a80d-afecb6b1eb38",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNazovTb",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Shippers"
+  },
+  {
+    "qInfo": {
+      "qId": "21bd1519-664d-4698-9d06-e7062140af96",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "noRows",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "6571"
+  },
+  {
+    "qInfo": {
+      "qId": "248aa506-af99-4b89-a4c2-e6169c34145b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEU",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 €;-# ##0 €",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "2925c3f4-a9a4-4ce3-b5ec-9a3b468d9094",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTableCount",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "2"
+  },
+  {
+    "qInfo": {
+      "qId": "2bbf8f7f-7683-4f54-b133-5517ea40eab8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "2e7db420-d406-4a4e-80db-34fd8defc677",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPcs",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 pcs",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "2f4eff66-cd7c-4a4d-8c79-9ca8b4a567bc",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vSheetName",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "PlnyUvazok$"
+  },
+  {
+    "qInfo": {
+      "qId": "36a2611e-a37c-4332-a8a3-81cebb232577",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEU2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00 €;-# ##0,00 €",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "4358f910-d3cb-49ba-88bf-39bfbf425674",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPerc2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00%",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "4a8d25c2-0f1f-4c5f-94ee-a5f797f433a8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dQVD",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://3_QVD(DEV)/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "52c17900-e4b7-4170-8ccb-5130883fd61e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMinDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "39191"
+  },
+  {
+    "qInfo": {
+      "qId": "54ea8731-4136-47b3-b569-b8359e870247",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dInput",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://2_Input(DEV)/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "59a21428-7066-4ed5-b6b0-f33ad9fe960d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMaxDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "40999"
+  },
+  {
+    "qInfo": {
+      "qId": "6835e870-1f70-45ad-8dda-73d482cfd2e0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "72304a55-9c33-4f3f-9e13-d78802c85ab7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPerc1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,0%",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "72993181-f520-46d1-a065-bef28b6e66da",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "7451fb85-ce64-4f4a-a14d-36c0b2da1380",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEU1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,0 €;-# ##0,0 €",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "74c20561-5ade-4e7c-a4a5-2aeb2810b9e1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fNum2Th",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0,00 ths",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "8def5e8d-0bcf-4bcc-bc64-345c4d63c05e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "DISABLE_INSIGHTS",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "8f6c490c-e149-448e-8f77-577b28259e0a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPcsTh",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 tpcs",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "98371139-8765-41e9-b0c3-0e8a94edc4ae",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dUser",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "a0700d5c-8276-41a8-b16a-11bc066f0f4d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dDatabase",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "DB_Database(DEV)",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "b0447ae8-7d38-42b3-af3c-4ac3290c4fda",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dDEV",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://0_DEV/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "b4e12402-88cc-4b7e-b32e-c72babd7043f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "NoRows",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "77"
+  },
+  {
+    "qInfo": {
+      "qId": "bc473bc8-66f6-4ddc-b987-bcd2a0735e94",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fExchEUTh",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 t€;-# ##0 t€",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "bf4b9441-085f-4b94-afb9-9351a635e6e5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "fPerc",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "# ##0 %",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "c0b73d68-2031-4837-b5cd-c7878b50ae3d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dPROD",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://0_PROD/",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "c68a298b-a4ee-4ec0-b22b-d4263a4a89a4",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "Today",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "40999"
+  },
+  {
+    "qInfo": {
+      "qId": "cea256d1-b0fa-402a-8db2-0e99a8e58744",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vRowNo",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "8"
+  },
+  {
+    "qInfo": {
+      "qId": "d3dc88eb-ff81-48d7-a617-ae36d1539cac",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "Envi",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "DEV",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "e7399252-32c5-4a47-ac88-c8b14a6ddfe5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "dGovernance",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://1_Governance(DEV)/",
+    "qIsScriptCreated": true
+  }
+]
