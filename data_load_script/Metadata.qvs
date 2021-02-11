@@ -1,0 +1,37 @@
+///$tab Metadata
+Employee:
+LOAD
+    EmpID,
+    "Last Name",
+    "First Name",
+    Title,
+    "Hire Date",
+    Office,
+    "Extension",
+    "Reports To",
+    "Year Salary"
+FROM [lib://2_Input(DEV)/EmpOff.xls]
+(biff, embedded labels, table is Employee$);
+
+
+Map_Fielsdsname:
+Mapping
+LOAD
+    _Field,
+    _DisplayName_SK
+FROM [lib://2_Input(DEV)/Metadata.xlsx]
+(ooxml, embedded labels, table is Fields);
+
+Rename Fields using Map_Fielsdsname;
+
+Map_comments:
+Mapping
+LOAD
+    _Field,
+    _Comment
+FROM [lib://2_Input(DEV)/Metadata.xlsx]
+(ooxml, embedded labels, table is Fields);
+
+
+
+Comment Fields using Map_comments;
