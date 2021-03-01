@@ -1,13 +1,8 @@
 {
   "qInfos": [
     {
-      "qId": "LoadModel",
-      "qType": "LoadModel"
-    },
-    {
-      "qId": "af6550aa-56ee-496d-afea-b41b3e236d4f",
-      "qType": "appprops",
-      "modifiedDate": "2021-02-02T09:54:07.003Z"
+      "qId": "4061496b-e7a3-40cb-a6fd-761a1dcd1d23",
+      "qType": "appprops"
     }
   ]
 }

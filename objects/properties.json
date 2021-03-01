@@ -1,14 +1,73 @@
 {
-  "qTitle": "user4 - NB",
-  "qLastReloadTime": "2021-02-11T07:54:40.223Z",
+  "qTitle": "5esdtr",
   "qMigrationHash": "504d4e39a7133ee172fbe29aa58348b1e4054149",
-  "qSavedInProductVersion": "12.811.4",
+  "qSavedInProductVersion": "12.531.8",
   "qThumbnail": {},
-  "createdDate": "2021-02-02T09:54:02.092Z",
-  "modifiedDate": "2021-02-11T07:55:58.579Z",
+  "description": "",
+  "stream": null,
+  "dynamicColor": "",
+  "createdDate": "2021-03-01T07:21:30.176Z",
+  "modifiedDate": "2021-03-01T07:21:30.176Z",
   "published": false,
   "publishTime": "1753-01-01T00:00:00.000Z",
-  "description": "",
-  "dynamicColor": "",
-  "stream": null
+  "privileges": [
+    "read",
+    "update",
+    "delete",
+    "publish",
+    "exportdata",
+    "offlineaccess",
+    "duplicate"
+  ],
+  "create": [
+    {
+      "resource": "sheet",
+      "canCreate": true
+    },
+    {
+      "resource": "bookmark",
+      "canCreate": true
+    },
+    {
+      "resource": "snapshot",
+      "canCreate": true
+    },
+    {
+      "resource": "story",
+      "canCreate": true
+    },
+    {
+      "resource": "dimension",
+      "canCreate": true
+    },
+    {
+      "resource": "measure",
+      "canCreate": true
+    },
+    {
+      "resource": "masterobject",
+      "canCreate": true
+    },
+    {
+      "resource": "folderconnection",
+      "canCreate": true
+    },
+    {
+      "resource": "oledbconnection",
+      "canCreate": true
+    },
+    {
+      "resource": "odbcconnection",
+      "canCreate": true
+    },
+    {
+      "resource": "internetconnection",
+      "canCreate": true
+    },
+    {
+      "resource": "customconnection",
+      "canCreate": true
+    }
+  ],
+  "canCreateDataConnections": true
 }
